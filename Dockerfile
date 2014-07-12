@@ -37,4 +37,4 @@ EXPOSE 80
 
 RUN echo "To complete the installation go to http://`ip addr show | grep -E '^\s*inet' | grep -m1 global | awk '{ print $2 }' | sed 's|/.*||'`/install.php"
 
-CMD ["systemctl start httpd.service && "]
+CMD ["systemctl start httpd.service && systemctl start mariadb.service"]
