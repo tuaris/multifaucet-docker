@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Run MySQL/MariaDB
-systemctl start mariadb.service
+# Manually Run MySQL/MariaDB
+/usr/sbin/mysqld &
 
 sleep 5
 
