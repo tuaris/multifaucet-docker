@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Manually Run MySQL/MariaDB
-/usr/sbin/mysqld &
-
-sleep 5
-
 # Genorate random password
 MULTIFAUCET_DB_PASS=`date | md5sum | head -c 8`
 
