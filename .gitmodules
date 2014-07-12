@@ -1,0 +1,3 @@
+[submodule "multifaucet"]
+	path = multifaucet
+	url = https://github.com/tuaris/multifaucet.git
