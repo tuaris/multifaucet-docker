@@ -4,7 +4,7 @@
 ############################################################
 
 # Set the base image to Centos
-FROM tuaris/docker-centos-lamp
+FROM tuaris/centos-lamp
 MAINTAINER Daniel Morante
 
 # Download MultiFaucet
@@ -16,3 +16,4 @@ RUN /bin/sh /tmp/do-config.sh
 
 ##################### INSTALLATION END #####################
 EXPOSE 80
+CMD ["/usr/sbin/init"]
