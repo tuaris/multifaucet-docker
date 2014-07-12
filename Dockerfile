@@ -27,7 +27,7 @@ ADD ./do-config.sh /tmp/do-config.sh
 RUN /bin/sh /tmp/do-config.sh
 
 #Open port 80 on Firewall
-RUN firewall-cmd --permanent --add-port=80/tcp
+RUN /usr/bin/firewall-cmd --permanent --add-port=80/tcp
 
 ##################### INSTALLATION END #####################
 EXPOSE 80
