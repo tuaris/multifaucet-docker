@@ -1,9 +1,13 @@
 #!/bin/bash
 
-/usr/sbin/init
-
 # Genorate random password
 MULTIFAUCET_DB_PASS=`date | md5sum | head -c 8`
+
+# Manually Run MySQL/MariaDB
+cd '/usr' ; /usr/bin/mysqld_safe --datadir='/var/lib/mysql' &
+
+# Wait a bit
+sleep 5
 
 # Create MySQL/MariaDB Database and User
 mysql -e "CREATE DATABASE multifaucet;"
