@@ -1,5 +1,7 @@
 #!/bin/bash
 
+/usr/sbin/init
+
 # Genorate random password
 MULTIFAUCET_DB_PASS=`date | md5sum | head -c 8`
 
